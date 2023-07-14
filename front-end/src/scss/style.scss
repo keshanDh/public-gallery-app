@@ -1,0 +1,141 @@
+body{
+  background-color: dodgerblue;
+
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1589ef+0,e0cb7d+21,4adb59+44,76b3ed+64,f93220+100 */
+  //background: rgb(21,137,239); /* Old browsers */
+  //background: -moz-linear-gradient(left,  rgba(21,137,239,1) 0%, rgba(224,203,125,1) 21%, rgba(74,219,89,1) 44%, rgba(118,179,237,1) 64%, rgba(249,50,32,1) 100%); /* FF3.6-15 */
+  //background: -webkit-linear-gradient(left,  rgba(21,137,239,1) 0%,rgba(224,203,125,1) 21%,rgba(74,219,89,1) 44%,rgba(118,179,237,1) 64%,rgba(249,50,32,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  //background: linear-gradient(to right,  rgba(21,137,239,1) 0%,rgba(224,203,125,1) 21%,rgba(74,219,89,1) 44%,rgba(118,179,237,1) 64%,rgba(249,50,32,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1589ef', endColorstr='#f93220',GradientType=1 ); /* IE6-9 */
+
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: default;
+  user-select: none;
+  //background-image: url("../img/background.avif");
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1589ef+0,e0cb7d+21,4adb59+44,76b3ed+64,f93220+100 */
+  background: rgba(21,137,239,0.7); /* Old browsers */
+  background: -moz-linear-gradient(left,  rgba(21,137,239,0.8) 0%, rgba(224,203,125,0.7) 21%, rgba(74,219,89,0.8) 44%, rgba(118,179,237,0.7) 64%, rgba(249,50,32,0.7) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(21,137,239,1) 0%,rgba(224,203,125,1) 21%,rgba(74,219,89,1) 44%,rgba(118,179,237,1) 64%,rgba(249,50,32,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(21,137,239,0.8) 0%,rgba(224,203,125,0.8) 21%,rgba(74,219,89,0.8) 44%,rgba(118,179,237,0.8) 64%,rgba(249,50,32,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1589ef', endColorstr='#f93220',GradientType=1 ); /* IE6-9 */
+
+
+}
+header > h1 > span{
+  color: black;
+  font-size: 35px !important;
+  position: relative;
+  top: 5px !important;
+}
+#overlay{
+  top: 0;
+  background-color: rgba(159, 156, 156, 0.6);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 9999;
+}
+#overlay > div{
+  height: 60%;
+  width: 60%;
+  background-color: rgba(10, 70, 201, 0.6);
+  border-radius: 10px;
+  border: 5px dashed #2d2b2b;
+  cursor: grab;
+}
+#drop-zone > span{
+  font-size: 50px;
+}
+main{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+.image {
+  height: 200px;
+  width: 150px;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  //gap: 10px;
+  margin: 5px;
+  transition-duration: 500ms;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(222, 222, 222, 0.5);
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}
+.loading{
+  width: 150px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgrey;
+
+  .lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: dodgerblue;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+}
